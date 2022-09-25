@@ -51,6 +51,10 @@ public interface UserMapper {
      */
     public List<Resource> findResourceByRoleId(List<Integer> id);
 
+    public void ruanjian12();
+    public void ruanjian22();
+    public void ruanjian32();
+    public void ruanjian42();
 
 }
 
