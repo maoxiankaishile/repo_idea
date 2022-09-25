@@ -52,12 +52,9 @@ public interface UserMapper {
      */
     public List<Resource> findResourceByRoleId(List<Integer> id);
 
-    
-    public void test21();
-   public void test22();
-   public void test23();
-   public void test24();
-   public void test25();
-   public void test26();
+
+    public String xiao();
+
+
 }
 
