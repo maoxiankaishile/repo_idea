@@ -52,6 +52,8 @@ public interface UserMapper {
      */
     public List<Resource> findResourceByRoleId(List<Integer> id);
 
-
+     public List<Resource> findResourceByRoleId2(List<Integer> id);
+    
+      public List<Resource> findResourceByRoleId3(List<Integer> id);
 }
 
