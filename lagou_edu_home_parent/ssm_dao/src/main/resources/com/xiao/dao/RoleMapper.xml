@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.xiao.dao.RoleMapper">
+
+
+    <select id="findAllRole" resultType="role" parameterType="role">
+        select id,
+               CODE,
+               NAME,
+               description,
+               created_time,
+               updated_time,
+               created_by,
+               updated_by from roles
+        <where>
+            <if test="name != null and name != ''">
+                and name = #{name}
+            </if>
+        </where>
+    </select>
+
+    <select id="findMenuByRoleId" parameterType="int" resultType="string">
+        SELECT m.id FROM roles r LEFT JOIN role_menu_relation rm ON r.id = rm.role_id
+                                 LEFT JOIN menu m ON rm.menu_id = m.id WHERE r.id =#{id}
+    </select>
+
+    <!--删除角色菜单关联信息-->
+    <delete id="deleteRoleContextMenu" parameterType="int">
+        delete from role_menu_relation where role_id = #{id}
+    </delete>
+
+    <!--角色菜单关联-->
+    <insert id="RoleContextMenu" parameterType="role_menu_relation">
+        insert into role_menu_relation values(null,#{menuId},#{roleId},#{createdTime},#{updatedTime},#{createdBy},#{updatedby})
+    </insert>
+
+    <delete id="deleteRole" parameterType="int">
+        delete from roles where id = #{id}
+    </delete>
+
+</mapper>
