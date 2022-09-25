@@ -41,7 +41,6 @@ public interface UserMapper {
      */
 
     public List<Menu> findParentMenuByRoleId(List<Integer> ids);
-
     /**
      * 根据PID 查询子菜单信息
      */
@@ -51,7 +50,6 @@ public interface UserMapper {
      * 获取用户拥有的资源权限信息
      */
     public List<Resource> findResourceByRoleId(List<Integer> id);
-
 
 
     public String xiao();
