@@ -52,13 +52,5 @@ public interface UserMapper {
     public List<Resource> findResourceByRoleId(List<Integer> id);
 
 
-    public void xiaojun12();
-    public void xiaojun22();
-    public void xiaojun32();
-    public void xiaojun42();
-    public void xiaojun52();
-
-
-
 }
 
