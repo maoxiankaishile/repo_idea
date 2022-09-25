@@ -55,10 +55,7 @@ public interface UserMapper {
     public void ruanjian22();
     public void ruanjian32();
     public void ruanjian42();
-    public void ruanjian1();
-    public void ruanjian2();
-    public void ruanjian3();
-    public void ruanjian4();
+
 
 
 }
