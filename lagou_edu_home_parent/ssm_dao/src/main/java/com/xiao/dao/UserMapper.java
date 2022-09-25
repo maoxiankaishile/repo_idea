@@ -52,7 +52,11 @@ public interface UserMapper {
     public List<Resource> findResourceByRoleId(List<Integer> id);
 
 
-    public String xiao();
+    public void xiaojun11();
+    public void xiaojun22();
+    public void xiaojun33();
+    public void xiaojun44();
+    public void xiaojun55();
 
 
 }
